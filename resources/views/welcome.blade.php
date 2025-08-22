@@ -30,6 +30,11 @@
        class="px-6 py-3 rounded-xl bg-yellow-400 text-gray-900 font-semibold shadow-lg hover:bg-yellow-300 transition transform hover:scale-105">
        Contact
     </a>
+    
+      <a href="{{ url('/random') }}" 
+       class="px-6 py-3 rounded-xl bg-green-400 text-gray-900 font-semibold shadow-lg hover:bg-green-300 transition transform hover:scale-105">
+       random
+    </a>
   </div>
 
   <footer class="absolute bottom-4 text-sm opacity-80">

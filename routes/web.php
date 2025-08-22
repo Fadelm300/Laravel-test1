@@ -24,6 +24,15 @@ route::get('/about', function () {
     $name = 'Fadel';
     return view('about')->with('my_name', $name);
 });
+
 Route::get('/contact', function () {
     return view('contact');
 });
+
+//random route to test loops and condition in blade and some other things
+Route::get('/random', function () {
+    $val=10;
+    $students=['ahmed','mohamed','sara','aya','ali'];
+    return view('random')->with('value',$val)->with('students',$students);
+});
+
