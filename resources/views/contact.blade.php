@@ -27,6 +27,12 @@
             <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                 Send Message
             </button>
+            <section class="text-center">
+      <a href="{{ url('/') }}" 
+         class="px-6 py-2 rounded-lg shadow bg-blue-500 text-white font-semibold transition transform hover:bg-blue-600 hover:scale-105">
+         Back to Home
+      </a>
+    </section>
         </form>
     </div>
 </body>

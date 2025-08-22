@@ -18,8 +18,11 @@ return 'مرحبا يا فاضل! Laravel شغال';
 Route::get('/', function () {
     return view('welcome');
 });
+// try to pass data to about view from here and create about.blade.php in views folder
+//just pass my name to about view and display it there
 route::get('/about', function () {
-    return view('about');
+    $name = 'Fadel';
+    return view('about')->with('my_name', $name);
 });
 Route::get('/contact', function () {
     return view('contact');
