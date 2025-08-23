@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\test1controler;
+use App\Http\Middleware\ISuser;
+use GuzzleHttp\Promise\Is;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,4 +38,14 @@ Route::get('/random', function () {
     $students=['ahmed','mohamed','sara','aya','ali'];
     return view('random')->with('value',$val)->with('students',$students);
 });
+
+Route::get('/test1', [test1controler::class, 'show']);
+
+//this route will receive a name parameter and pass it to the controller ((test1controler)) and the function ((sayHello))
+Route::get('/test1/{name}', [test1controler::class, 'sayHello'])->middleware(ISuser::class);
+
+// (((   ->middleware(ISuser::class)  ))) just for test the middleware
+
+//try login this will return a login page 
+Route::get('/login', [test1controler::class, 'login']);
 

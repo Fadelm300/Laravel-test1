@@ -154,7 +154,12 @@ If the variable $variable comes from an external user (for example, someone wrot
     @endforeach
 {{-- Loop Variables help track the state of the loop (first, last, index, etc.) --}}
 
-    
+     <section class="text-center">
+      <a href="{{ url('/') }}" 
+         class="px-6 py-2 rounded-lg shadow bg-blue-500 text-white font-semibold transition transform hover:bg-blue-600 hover:scale-105">
+         Back to Home
+      </a>
+    </section>
 
 </body>
 </html>
