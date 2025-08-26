@@ -49,3 +49,5 @@ Route::get('/test1/{name}', [test1controler::class, 'sayHello'])->middleware(ISu
 //try login this will return a login page 
 Route::get('/login', [test1controler::class, 'login']);
 
+
+
