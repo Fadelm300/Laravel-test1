@@ -1,7 +1,9 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +62,10 @@ Route::patch('/hello', function () {
 });
 //=================================
 
+// will go to userControler php and will use the createRandomUser method
+Route::post('/createRandomUser', [UserController::class, 'createRandomUser']);
+
+// another way to define the route
+// Route::post('/createRandomUser', UserController::class, '@createRandomUser');
+//to create UserController in terminal with
+// php artisan make:controller UserController
